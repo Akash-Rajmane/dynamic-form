@@ -13,6 +13,7 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(formFields);
+    setFormFields([{ name: "", age: "" }])
   };
 
   const addFields = () => {
