@@ -55,7 +55,7 @@ function App() {
             </div>
           );
         })}
-        <button onClick={addFields}>Add More..</button>
+        <button type="button" onClick={addFields}>Add More..</button>
         <br />
         <button type="submit">Submit</button>{" "}
       </form>
