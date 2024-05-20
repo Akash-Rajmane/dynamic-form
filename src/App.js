@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
 import "./App.css";
 
 function App() {
@@ -34,24 +35,25 @@ function App() {
   return (
     <div className="app">
       <form onSubmit={submitHandler}>
-        {formFields.map((form, index) => {
+        {formFields.map((form) => {
+          const id = uuid();
           return (
-            <div key={index}>
+            <div key={id}>
               <input
                 type="text"
                 name="name"
                 placeholder="Name"
-                onChange={(event) => handleFormChange(event, index)}
+                onChange={(event) => handleFormChange(event, id)}
                 value={form.name}
               />
               <input
                 type="number"
                 name="age"
                 placeholder="Age"
-                onChange={(event) => handleFormChange(event, index)}
+                onChange={(event) => handleFormChange(event, id)}
                 value={form.age}
               />
-              <button type="button" onClick={() => removeFields(index)}>
+              <button type="button" onClick={() => removeFields(id)}>
                 Remove
               </button>
             </div>
