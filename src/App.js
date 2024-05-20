@@ -13,7 +13,7 @@ function App() {
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(formFields);
-    setFormFields([{ name: "", age: "" }])
+    setFormFields([{ name: "", age: "" }]);
   };
 
   const addFields = () => {
@@ -51,11 +51,15 @@ function App() {
                 onChange={(event) => handleFormChange(event, index)}
                 value={form.age}
               />
-              <button onClick={() => removeFields(index)}>Remove</button>
+              <button type="button" onClick={() => removeFields(index)}>
+                Remove
+              </button>
             </div>
           );
         })}
-        <button type="button" onClick={addFields}>Add More..</button>
+        <button type="button" onClick={addFields}>
+          Add More..
+        </button>
         <br />
         <button type="submit">Submit</button>{" "}
       </form>
