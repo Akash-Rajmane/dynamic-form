@@ -43,17 +43,17 @@ function App() {
                 type="text"
                 name="name"
                 placeholder="Name"
-                onChange={(event) => handleFormChange(event, id)}
+                onChange={(event) => handleFormChange(event, index)}
                 value={form.name}
               />
               <input
                 type="number"
                 name="age"
                 placeholder="Age"
-                onChange={(event) => handleFormChange(event, id)}
+                onChange={(event) => handleFormChange(event, index)}
                 value={form.age}
               />
-              <button type="button" onClick={() => removeFields(id)}>
+              <button type="button" onClick={() => removeFields(index)}>
                 Remove
               </button>
             </div>
